@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'rubygems'
 require 'tilt/erb'
-# require 'bcrypt'
-# require 'pony'
-# require 'bcrypt'
-# require 'pg'
+require 'bcrypt'
+require 'pony'
+require 'bcrypt'
+require 'pg'
 require_relative "grandbash_functions.rb"
 load "./local_env.rb" if File.exists?("./local_env.rb")
 
