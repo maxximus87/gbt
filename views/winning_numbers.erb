@@ -1,0 +1,36 @@
+<div class="container-margin">
+<br><br>
+    <center><h1 class= "smediaheadline"> <%= message %></h1></center><br><br>
+    <!--winning number table-->            
+    <center>
+       <form class="prize-table" action="/winning_number_search" method="post">
+           <input class="input-mysize" type="text" name="search"  placeholder="Winning Numbers">
+           <input class="btn btn-default" type="submit" value="submit">
+       </form><br><br>
+    </center>    
+    <center>
+       <div class="table-responsive prize-table">
+           <table class="table table-striped table-bordered">
+               <tr><th class="winningnumbertable">Draw Time</th>
+                   <th class="winningnumbertable mobile-table">Image</th>
+                   <th class="winningnumbertable">Prize</th>
+                   <th class="winningnumbertable mobile-table">Description</th>
+                   <th class="winningnumbertable">Winning Number</th>
+               </tr>
+               <tbody>
+                  <%if prizes %>
+                   <%prizes.each do |prizes|%>
+                       <tr class="tablefont">
+                           <td class="tablefont"><%=prizes["draw_time"]%></td>
+                           <td class="mobile-table"><%=prizes["img_location"]%></td>
+                           <td><%=prizes["name"]%></td>
+                           <td class="mobile-table"><%=prizes["description"]%></td>
+                           <td><%=prizes["winning_number"]%></td>
+                       </tr>         
+                   <%end%>
+                  <%end%>
+               </tbody>
+           </table>
+       </div>
+    </center>
+</div>
