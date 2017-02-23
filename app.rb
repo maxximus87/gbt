@@ -4,19 +4,10 @@ require 'tilt/erb'
 require 'bcrypt'
 require 'pony'
 require 'bcrypt'
-require 'pg'
 require_relative "grandbash_functions.rb"
 load "./local_env.rb" if File.exists?("./local_env.rb")
 
-db_params={
-   host: "grandbash.c4iif5msrrmw.us-west-2.rds.amazonaws.com",
-   port:'5432',
-   dbname:'grandbash',
-   user:ENV['user'],
-   password:ENV['password'],    
-}
 
-db= PG::Connection.new(db_params)
 
 set :sessions,
     key: ENV['key'],
