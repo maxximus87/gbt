@@ -51,6 +51,10 @@ get '/faq' do
     erb :faq
 end
 
+get '/social_media' do
+  erb :social_media
+end
+
 
 get '/photos' do
     @title = 'GrandBash| Photos'
