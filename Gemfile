@@ -1,9 +1,8 @@
-source "https://rubygems.org"
-
-gem 'sinatra'
-gem 'tilt'
-gem 'rack'
-gem 'rack-protection'
-gem 'bcrypt'
-gem 'pg'
-gem 'pony'
+source 'http://rubygems.org'
+ruby '2.2.5'
+gem 'tilt', '~>2.0.6'
+gem 'sinatra', '~>1.4.8'
+gem 'pg', '~>0.19.0'
+gem 'pony', '~>1.11'
+gem 'bcrypt', '~>3.1.11'
+gem 'bundler', '~>1.13.2'
