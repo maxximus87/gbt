@@ -35,6 +35,10 @@ get '/index.erb' do
   erb :index
 end
 
+get '/facebook' do
+  erb :facebook
+end
+
 get '/about' do
     @title = 'GrandBash| About WVU Childrens'
     erb :about
